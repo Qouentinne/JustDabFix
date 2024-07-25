@@ -34,10 +34,4 @@ public class AdvisorController {
         return ResponseEntity.ok(clients);
     }
 
-    @GetMapping("/advisor/welcome")
-    @ResponseBody
-    public ResponseEntity<String> getWelcomeMessage() {
-        return ResponseEntity.ok("Welcome Advisor to JustDAB");
-    }
-
 }

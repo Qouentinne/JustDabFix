@@ -7,18 +7,11 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorValue(RoleType.ADVISOR)
-public class Employee extends AppUser {
+public class Employee extends User {
 
     @JsonBackReference
     @OneToMany(mappedBy = "advisor")
     private List<Client> clients;
-
-    public Employee(String username, String password, String role) {
-        super(username, password, role);
-    }
-
-    protected Employee() {}
 
     public List<Client> getClients() {
         return clients;
