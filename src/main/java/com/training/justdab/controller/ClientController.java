@@ -47,4 +47,10 @@ public class ClientController {
         return ResponseEntity.ok(advisor);
     }
 
+    @GetMapping("/client/welcome")
+    @ResponseBody
+    public ResponseEntity<String> getWelcomeMessage() {
+        return ResponseEntity.ok("Welcome Client to JustDAB");
+    }
+
 }
