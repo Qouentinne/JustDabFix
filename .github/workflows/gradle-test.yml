@@ -2,8 +2,6 @@ name: Check - Backend
 
 on:
   push:
-    branches:
-      - main
   pull_request:
 
 jobs:
@@ -43,13 +41,15 @@ jobs:
             **/build/reports/
             **/build/test-results/   
 
-      - name: Execute Gradle build
-        run:          
-          ./gradlew build
+      # - name: Execute Gradle build
+      #   run:          
+      #     ./gradlew build
 
-      - name: Store Production Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: distribution
-          path: |
-            **/build/libs
+      # - name: Store Production Artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: distribution
+      #     path: |
+      #       **/build/libs
+
+      
